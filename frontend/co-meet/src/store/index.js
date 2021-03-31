@@ -146,7 +146,6 @@ export default new Vuex.Store({
         console.log(response);
       })
       .catch(error => {
-        context.commit("OFF_SEARCHING")
         alert(error);
       })
 
