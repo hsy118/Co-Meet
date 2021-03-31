@@ -256,7 +256,7 @@ export default {
       this.location = data.jibunAddress;
       console.log(data);
       var parseString = require('xml2js').parseString;
-      var key = "724F11D9-11DF-3551-8C3A-087018009F26";
+      var key = "9F9E4000-1B83-3B87-916E-0954B13C446B";
       var jsonTemp = {};
       var self = this;
       axios.get('http://apis.vworld.kr/jibun2coord.do?q=' + data.jibunAddress + "&format=json&apiKey=" + key)
