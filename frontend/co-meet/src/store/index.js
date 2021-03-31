@@ -14,6 +14,7 @@ export default new Vuex.Store({
     gugunData: [],
     recomCity: [],
     mapToggle: false,
+    reRecom : false,
     accessToken: localStorage.getItem('accessToken'),
     userEmail: localStorage.getItem('email'),
     userName: localStorage.getItem('nickname'),
@@ -43,6 +44,9 @@ export default new Vuex.Store({
     get_mapToggle(state) {
       return state.mapToggle
     },
+    get_reRecom(state){
+      return state.reRecom;
+    },
     get_resultCity(state) {
       return state.recomCity
     },
@@ -67,6 +71,12 @@ export default new Vuex.Store({
     MAPTOGGLE(state) {
       state.mapToggle = !state.mapToggle
     },
+    MAPCANCLE(state) {
+      state.mapToggle = false;
+      state.gugun= [];
+      state.gugunData= [];
+      state.recomCity= [];
+    },
     ON_SEARCHING(state) {
       state.onSearching = true
     },
@@ -79,6 +89,12 @@ export default new Vuex.Store({
     PUT_RESULT(state, location) {
       state.recomCity.push(location)
     },
+    ON_RERECOM(state){
+      state.reRecom = true;
+    },
+    OFF_RERECOM(state){
+      state.reRecom = false;
+    }
   },
   actions: {
     async GET_RECOM(context, city) {

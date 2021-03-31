@@ -2,7 +2,7 @@
   <div class="reccom">
     <Navbar />
     <Address />
-    <Graph />
+    <Graph/>
     <Explain />
   </div>
 </template>
@@ -20,7 +20,6 @@ export default {
     Graph,
     Explain,
   },
-
 }
 </script>
 
